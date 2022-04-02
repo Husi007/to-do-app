@@ -1,0 +1,25 @@
+{
+  "development": {
+    "database": "unlayerDb",
+    "password": "password",
+    "username": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "unlayerDb_testing",
+    "dialect": "postgres",
+    "username": "postgres",
+    "host": "localhost",
+    "password": "password"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
