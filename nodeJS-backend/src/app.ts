@@ -10,7 +10,8 @@ import { ErrorConstants } from "./centeralizedErrorHandler/constants";
 const app = express();
 
 app.set("trust proxy", true);
-app.use(json);
+//@ts-ignore
+app.use(json());
 app.use(
   cookieSession({
     secure: process.env.NODE_ENV !== "test",
