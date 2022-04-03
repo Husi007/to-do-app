@@ -20,8 +20,9 @@ router.post(
 router.post(
   "/signin",
   [
-    body("username").trim().notEmpty().withMessage("username is required"),
-    body("password").trim().notEmpty().withMessage("Password is required"),
+    ROUTE_VALIDATIONS.BODY.NAME,
+    ROUTE_VALIDATIONS.BODY.USERNAME,
+    ROUTE_VALIDATIONS.BODY.PASSWORD,
   ],
   validateRequest,
   usersController.signIn
