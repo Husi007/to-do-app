@@ -1,5 +1,4 @@
 import express from "express";
-import { body } from "express-validator";
 import usersController from "../controllers/users";
 import { validateAuthorization } from "../middlewares/validateAuthorization";
 import { validateRequest } from "../middlewares/validateRequest";
